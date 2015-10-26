@@ -3,18 +3,18 @@ require 'rails_helper'
 describe MoviesController do
   fixtures :movies, :locations, :movies_locations
 
-  context '#locationss' do
+  context '#locations' do
     before do
       @movie1 = movies(:movie1)
       @movie_id = @movie1.id
     end
 
-    it 'get movies when valid id given' do
+    it 'get locations when valid id given' do
       get :locations, id: @movie_id
       expect(response.body).to eq('{"Lord Of The Rings":[{"id":255093256,"location_name":"Delhi"},{"id":373111740,"location_name":"Kolkata"}]}')
     end
 
-    it 'get movies when invalid id given' do
+    it 'get locations when invalid id given' do
       get :locations, id: 17688
       expect(response.body).to eq('{"error":"No movie found"}')
     end
