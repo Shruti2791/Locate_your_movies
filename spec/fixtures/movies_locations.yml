@@ -1,0 +1,11 @@
+movie1_location1:
+  movie: movie1
+  location: location1
+
+movie1_location2:
+  movie: movie1
+  location: location2
+
+movie2_location1:
+  movie: movie2
+  location: location1
